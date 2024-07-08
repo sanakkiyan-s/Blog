@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><a href="#" style="color: #111;">Blog Posts</a></h1>
+    </div>
+    <section class="main" style="background: none;">
+        <a href="/new" class="new-post">New Post</a>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <a href="/post/<%= post._id %>"><%= post.title %></a>
+                    <div style="padding: 8px 0px 0px 0px; display: flex; align-items: center;">
+                        <div><img src="img/calender.svg" /></div>
+                        <div style="font-size: 1.25rem;">&nbsp;<%=post.date.toLocaleDateString() %></div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <form action="/delete/<%= post._id %>" method="post" style="display: inline; margin: 0px 15px 0px 0px;">
+                            <button type="submit" class="delete-button non-button"><img src="/img/delete.svg" /></button>
+                        </form>
+                        <a href="/edit/<%= post._id %>"><img src="/img/edit.svg" /></a>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+    <script src="/js/scripts.js" defer></script>
+</body>
+</html>

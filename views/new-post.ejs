@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Post</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="body">
+    <div class="header">
+        <h1><a href="#" style="color: #111;">Blog Posts</a></h1>
+    </div>
+    <section class="main" style="margin: 100px 200px 20px 200px; border-radius: 15px;">
+        <div style="margin: 0px 40px; display: flex; justify-content: space-between; align-items: center;">
+            <div><h1 style="font-size: 2.2rem;">New Post</h1></div>
+            <div><a href="/"><img src="/img/home.svg" /></a></div>
+        </div>
+        <form action="/new" method="post">
+            <input type="text" name="title" placeholder="Title" required />
+            <textarea name="content" placeholder="Content" required></textarea>
+            <button type="submit">Create</button>
+        </form>
+    </section>
+</body>
+</html>

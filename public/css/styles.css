@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Expletus Sans", "Amita", sans-serif;
+  }
+  
+
+body {
+    margin: 20px;
+    min-height: 85vh;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab, #007BFF);
+    background-size: 300% 300%;
+}
+
+section {
+    background: #ffffffa3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 10px 0;
+    border: 3px solid #00000050;
+    border-radius: 25px;
+    padding: 16px;
+    width: 650px;
+    background: #fff;
+}
+
+li a {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #ffffffa3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header h1{
+    color: #111;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 100px;
+}
+
+.new-post {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #007BFF;
+    border-radius: 25px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 800px;
+    border: 1px solid #3331119f;
+    border-radius: 15px;
+}
+
+.body button {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #007BFF;
+    border-radius: 25px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+}
+
+.non-button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.post-contant {
+    margin: 100px 250px 20px 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #00000050;
+    border-radius: 10px;
+
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

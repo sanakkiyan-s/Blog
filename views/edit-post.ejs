@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body class="body">
+    <div class="header">
+        <h1>Edit Post</h1>
+    </div>
+    <section class="main" style="margin: 100px 215px; border-radius: 15px;">
+        <div style="display: flex; justify-content: space-between; margin: 5px 5px 10px 5px;">
+            <div><a href="/post/<%= post._id %>" style="text-align: center;"><img src="/img/back-to-post.svg" /></a></div>
+            <div><a href="/"><img src="/img/home.svg" /></a></div>
+        </div>
+        <form action="/edit/<%= post._id %>" method="post">
+            <input type="text" name="title" placeholder="Title" value="<%= post.title %>">
+            <textarea name="content" placeholder="Content"><%= post.content %></textarea>
+            <button type="submit" class="update-button non-button"><img src="/img/tick.svg" alt=""></button>
+        </form>
+    </section>
+</body>
+</html>

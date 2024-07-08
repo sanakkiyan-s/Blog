@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scripts.js" defer></script>
+    <style>
+        button {
+            background: none;
+	        color: inherit;
+	        border: none;
+	        padding: 0;
+	        font: inherit;
+	        cursor: pointer;
+	        outline: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="#" style="color: #111;">Blog Posts</a></h1>
+    </div>
+    <section class="main post-contant">
+        <div style="display: flex; justify-content: space-between; margin: 5px 5px 10px 5px;">
+            <div><a href="/"><img src="/img/home.svg"></a></div>
+            <div>
+                <div style="padding: 8px 0px 0px 0px; display: flex; align-items: center;">
+                    <div><img src="/img/calender.svg" /></div>
+                    <div style="font-size: 1.25rem;">&nbsp;<%=post.date.toLocaleDateString() %></div>
+                </div>
+            </div>
+        </div>
+        <div style="border: 2px solid #0000002d; border-radius: 5px; padding: 5px;">
+            <h1 style="font-size: 1.8rem; margin-left: 5px;"><%= post.title %></h1>
+            <p style="font-size: 1.2rem;">&emsp;&emsp;<%= post.content %></p>
+        </div>
+        <div style="display: flex; justify-content: space-evenly; align-items: center; border: 2px solid #0000002d; border-radius: 50px; padding: 5px; margin-top: 12px;">
+            <a href="/"><img src="/img/home.svg"></a>
+            <a href="/edit/<%= post._id %>">    <img src="/img/edit.svg" /></a>
+            <form action="/delete/<%= post._id %>" method="post" style="display: inline;">
+                <button type="submit" class="delete-button"><img src="/img/delete.svg" /></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
